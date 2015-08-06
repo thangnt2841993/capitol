@@ -1,0 +1,21 @@
+#middle-product .mask-middle-product{
+	position: relative;
+}
+#middle-product .mask-middle-product .mask-info{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	right:0px;
+	bottom: 0px;
+	opacity: 0;
+	overflow:hidden;
+}
+#middle-product .mask-middle-product:hover .mask-info{
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 0.7);
+	transition: all 0.4s ease-in-out;
+}
+#middle-product .mask-middle-product:hover .mask-info .row{
+	position: absolute;
+	bottom: 0px;
+}
