@@ -1,0 +1,52 @@
+header{
+	background-image: url("../images/header-background.jpg");
+	height: 1280px;
+	width: 100%;
+}
+header nav .container{
+	max-width: 1170px;
+	background-color: yellow;
+	position: relative;
+	top:20px;
+	left:10%;
+	right: 0px;
+}
+header nav .container .navbar-header{
+	float: left;
+	width: 30%;
+}
+header nav .container .navbar-right{
+	float: right;
+	width:70%;
+	text-align: right;
+}
+header nav{
+
+}
+header nav .container .navbar-right ul li{
+	display: inline;
+	padding: 0px 10px;
+}
+header nav .container .navbar-right ul li a{
+	color: red;
+	text-decoration: none;
+	font-family:'Montserrat';
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 15.6px;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: right
+}
+header nav .container .navbar-right ul li a:focus{
+	color: #b6683f;
+	transition: all 0.4s ease-in-out;
+}
+#our-services .container .col-xs-6{
+	float:left;
+	width: 25%;
+}
+#our-services{
+	padding-bottom: 150px;
+}

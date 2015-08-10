@@ -699,3 +699,46 @@ footer #bottom #right{
 		padding-top: 50px;
 	}
 }
+@media (min-width: 1170px){
+	#menu-extra .container {
+		padding-top: 65px;
+	}
+}
+@media (max-width: 767px){
+	header .navbar{
+		background-color: rgba(0,255,0,0.7);
+		padding-bottom: 15px;
+	}
+	header .navbar ul li{
+		border-bottom: 1px solid #b6683f;
+		text-align: center;
+		background-color: #000;
+	}
+	header .navbar-toggle:hover{
+		background-color: rgba(255,255,255,0.9);
+	}
+	header .navbar-toggle{
+		border:1px solid #000;
+		background-color: rgba(255,255,255,0.7);
+	}
+	header .navbar-toggle .icon-bar{
+		background-color: #000;
+	}
+	#Carousel .item h1,
+	#say-hello h1{
+		font-size: 36px;
+	}
+	#Carousel .item #icon {
+		padding-top: 180px;
+	}
+	#Carousel .item p{
+		font-size: 11px;
+	}
+	footer #middle .col-xs-12{
+		text-align: center;
+	}
+	footer #bottom ul,
+	footer #bottom #right{
+		text-align: center;
+	}
+}
