@@ -1,7 +1,7 @@
-#middle-product .mask-middle-product{
+#latest-works .mask-middle-product{
 	position: relative;
 }
-#middle-product .mask-middle-product .mask-info{
+#latest-works .mask-middle-product .mask-info{
 	position: absolute;
 	top: 0px;
 	left:0px;
@@ -10,12 +10,22 @@
 	opacity: 0;
 	overflow:hidden;
 }
-#middle-product .mask-middle-product:hover .mask-info{
+#latest-works .mask-middle-product:hover .mask-info{
 	opacity: 1;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.9);
 	transition: all 0.4s ease-in-out;
 }
-#middle-product .mask-middle-product:hover .mask-info .row{
+#latest-works .mask-middle-product:hover .mask-info .row{
 	position: absolute;
 	bottom: 0px;
+}
+#new-update #top-left .mask:hover .info-mask-update{
+	display: block;
+	opacity: 1;
+	background-color: rgba(0,0,0,0.7);
+	transition: all 0.4s ease-in-out;
+}
+#new-update .mask-update:hover .mask{
+	height: 260px;
+	background-color: rgba(0,0,0,0.7);
 }

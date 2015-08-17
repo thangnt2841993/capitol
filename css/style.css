@@ -12,9 +12,26 @@ header nav ul li a{
 	text-transform: uppercase;
 	color: #fff;
 }
-.menu-extra{
-	padding-bottom: 20px;
-	background-color: rgba(255,255,255,0.7);
+header nav a{
+	text-decoration: none !important;
+}
+ul,
+li{
+	list-style: none;
+}
+nav ul li ul li a{float:left;display:block;padding:7px 5px;color:#fff;margin-left: -20px;}
+nav ul li ul{position:absolute;width:120px;background:#1CBD9C;display:none;}
+nav ul li ul li{width:100%;float:right;}
+nav ul li ul li ul{margin-left:80px;margin-top:0;display:none;}
+li:hover > ul{display:block;}
+.sticky-menu{
+	background-color: rgba(0,0,0,0.9);
+	margin-top: -55px; 
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9999;
 }
 header nav li a:hover,
 header nav li a:focus{
@@ -57,7 +74,11 @@ header .carousel-inner .item p{
 	text-transform: uppercase;
 	padding-bottom: 60px;
 }
-header .carousel-inner .item a{
+header .carousel-inner .item .carousel-caption{
+	top: 50%;
+	transform:translateY(-50%); 
+}
+header .carousel-inner .item .carousel-caption .more{
 	font-family: 'Montserrat';
 	font-size: 13px;
 	font-weight: 400;
@@ -70,24 +91,39 @@ header .carousel-inner .item a{
 	text-decoration: none;
 	border-radius: 5%;
 }
-header .carousel-inner .item a:hover{
+header .carousel-inner .item .more:hover{
 	border: 2px solid #b6683f;
 	color: #b6683f;
 	transition: all 0.4s ease-in-out;
 }
-header .carousel-inner .item #icon{
-	padding-top: 470px;
+header .carousel-inner .item .center{
+	position: relative;
+	z-index: 999;
+	top: 50%;
+	transform: translateY(-50%);
+}
+header nav ul li button{
+	background: none;
+	border: 0px;
+	color: #fff;
+	padding-top: 15px;
+}
+header nav ul li button:focus{
+	border:none;
 }
 /*end header*/
 
 /*main*/
-/*logo*/
-#logo img{
-	padding: 120px 0px 35px 0px;
-}
-/*end logo*/
 
 /*say-hello*/
+#say-hello{
+	padding-top: 118px;
+	padding-bottom: 126px;
+	border-bottom: 1px solid #eeeeee;
+}
+#say-hello #logo img{
+	padding-bottom: 34px;
+}
 #say-hello h1{
 	font-family: 'Montserrat';
 	font-size: 60px;
@@ -96,7 +132,7 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0px;
 	color: #333333;
 	text-transform:uppercase;
-	padding-bottom: 5px;
+	padding-bottom: 2px;
 }
 #say-hello p{
 	font-family: 'Montserrat';
@@ -106,7 +142,7 @@ header .carousel-inner .item #icon{
 	letter-spacing: 1px;
 	color: #bbbbbb;
 	text-transform:uppercase;
-	padding-bottom: 60px;
+	padding-bottom: 40px;
 }
 #say-hello a{
 	font-family: 'Montserrat';
@@ -126,6 +162,9 @@ header .carousel-inner .item #icon{
 	color: #b6683f;
 	transition: all 0.4s ease-in-out;
 }
+#say-hello #img img{
+	padding-top: 125px;
+}
 /*end say-hello*/
 
 /*top-product*/
@@ -136,7 +175,8 @@ header .carousel-inner .item #icon{
 
 /*our-services*/
 #our-services{
-	padding-bottom: 120px;
+	padding-top: 95px;
+	padding-bottom: 70px;
 }
 #our-services h3{
 	font-family: 'Montserrat';
@@ -146,12 +186,12 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0.4px;
 	text-transform: uppercase;
 	color: #333333;
-	padding: 220px 0px 10px 0px;
+	padding-bottom: 40px;
 }
 #our-services .pe{
 	font-size: 60px;
 	color: #cccccc;
-	padding: 40px 0px 20px 0px;
+	padding-bottom: 20px;
 }
 #our-services h5{
 	font-family: 'Montserrat';
@@ -161,7 +201,7 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0.4px;
 	text-transform: uppercase;
 	color: #333333;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 }
 #our-services p{
 	font-family: 'Raleway';
@@ -170,6 +210,7 @@ header .carousel-inner .item #icon{
 	line-height: 22.4px;
 	letter-spacing: 0.4px;
 	color: #8c8c8c;
+	padding-bottom: 40px;
 }
 /*end our-services*/
 
@@ -179,15 +220,32 @@ header .carousel-inner .item #icon{
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
+	padding-top: 110px;
+	padding-bottom: 123px;
 }
-#theme-features h5{
+#theme-features #top h5{
 	font-family: 'Montserrat';
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 0.4px;
 	color: #fff;
 	text-transform: uppercase;
-	padding: 110px 0px 40px 0px;
+	padding-bottom: 44px;
+}
+#theme-features .box,
+#theme-features #right .bottom .row{
+	display: flex;
+}
+#theme-features .box #left{
+	background-color: #222222;
+	margin-right: 10px;
+	padding: 135px 30px;
+}
+#theme-features #left .pe{
+	color: #999999;
+	font-size: 40px;
+	line-height: 40px;
+	padding-bottom: 15px;
 }
 #theme-features h6{
 	font-family: 'Montserrat';
@@ -196,7 +254,10 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0.4px;
 	color: #333333;
 	text-transform: uppercase;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
+}
+#theme-features .box #left h6{
+	color: #fff;
 }
 #theme-features .box #left p{
 	font-family: 'Raleway';
@@ -205,36 +266,32 @@ header .carousel-inner .item #icon{
 	line-height: 22.4px;
 	letter-spacing: 0.4px;
 	color: #8c8c8c;
-	padding: 0px 0px 140px 30px;
-}
-#theme-features .box #left h6{
-	color: #fff;
-	padding-left: 30px;
-}
-#theme-features #right .top{
-	background-color: #fff;
 }
 #theme-features #right .pe{
 	font-size: 30px;
 	line-height: 30px;
 }
-#theme-features #right .top .pe{
-	padding: 50px 0px 10px 20px;
+#theme-features #right .top{
+	background-color: #fff;
+	padding: 57px 35px;
+	margin-bottom: 10px;
 }
-#theme-features #right .bottom .pe{
-	padding: 30px 0px 10px 20px;
-}
-#theme-features #right .bottom{
+#theme-features #right .bottom #right-left,
+#theme-features #right .bottom #right-right{
 	background-color: #e5e5e5;
+	flex:1;
 }
-#theme-features #right h6{
-	padding-left: 20px;
-	color: #606060;
-	font-family: 'Montserrat';
-	font-size: 14px;
-	text-transform: uppercase;
-	line-height: 16.8px;
-	letter-spacing: 0.4px;
+#theme-features #right .bottom #right-left{
+	width: 49%;
+	margin-right: 5px;
+}
+#theme-features #right .bottom #right-right{
+	width: 49%;
+	margin-left: 5px;
+}
+#theme-features #right .bottom #right-left,
+#theme-features #right .bottom #right-right{
+	padding: 35px 30px 20px 30px;
 }
 #theme-features #right p{
 	font-family: 'Raleway';
@@ -243,30 +300,15 @@ header .carousel-inner .item #icon{
 	line-height: 22.4px;
 	letter-spacing: 0.4px;
 	color: #a6a6a6;
-	padding-bottom: 45px;
-	padding-left: 20px;
-}
-#theme-features #right .top{
-	margin-bottom: 10px;
-}
-#theme-features .box .pe{
-	font-size: 40px;
-	line-height: 60px;
-	color: #999999;
-}
-#theme-features .box #left{
-	background-color: #222222;
-}
-#theme-features .box #left .pe{
-	padding: 120px 0px 25px 30px;
-}
-#theme-features .box{
-	padding-bottom: 120px;
 }
 /*end image-background */
 
 /*latest-works*/
-#latest-works h5{
+#latest-works{
+	padding-top: 110px;
+	padding-bottom: 70px;
+}
+#latest-works #info-works h5{
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	font-size: 20px;
@@ -274,9 +316,9 @@ header .carousel-inner .item #icon{
 	line-height: 24px;
 	letter-spacing: 0.4px;
 	color: #333333;
-	padding: 105px 0px 40px 0px;
+	padding-bottom: 35px;
 }
-#latest-works p{
+#latest-works #info-works p{
 	font-family: 'Raleway';
 	font-weight: 300;
 	font-size: 14px;
@@ -285,13 +327,10 @@ header .carousel-inner .item #icon{
 	color: #b3b3b3;
 	padding-bottom: 60px;
 }
-/*end latest-works*/
-
-/*middle-product*/
-#middle-product .container .row img{
+#latest-works .container .row img{
 	margin-bottom: 10px;
 }
-#middle-product .container .mask-info p{
+#latest-works .container .mask-info p{
 	font-family: 'Montserrat';
 	font-size: 14px;
 	color: #212121;
@@ -300,26 +339,36 @@ header .carousel-inner .item #icon{
 	text-transform: uppercase;
 	text-align: left;
 }
-#middle-product .container .mask-info .pe-7s-right-arrow{
+#latest-works .container .mask-info .pe-7s-right-arrow{
 	text-align: right;
 	font-size: 40px;
 	color: #b1b1b1;
 }
-#middle-product .container .mask-info .pe-7s-right-arrow:hover{
+#latest-works .container .mask-info .info{
+	padding: 0px 25px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+#latest-works .container .mask-info .info .pe-7s-right-arrow{
+	float: right;
+	padding-top: 10px;
+}
+#latest-works .container .mask-info .pe-7s-right-arrow:hover{
 	color: #b6683f;
 	transition: all 0.4s ease-in-out;
 }
-#middle-product .container .mask-middle-product{
+#latest-works .container .mask-middle-product{
 	margin: 0px -10px;
 }
-/*end middle-product*/
+/*end latest-works*/
 
 /*Portfolio*/
 #portfolio{
 	background-size: cover;
 	background-image:url("../images/background-view.jpg");
-	background-repeat: repeat; 
-	margin-top: 70px;
+	background-repeat: repeat;
 }
 .pe-7s-portfolio{
 	font-size: 60px;
@@ -360,7 +409,7 @@ header .carousel-inner .item #icon{
 }
 #portfolio .btn-portfolio{
 	padding-top: 90px;
-	padding-bottom: 60px;
+	padding-bottom: 80px;
 }
 
 /*end Portfolio*/
@@ -378,6 +427,17 @@ header .carousel-inner .item #icon{
 #data .container-fluid .main .fan{
 	background-color: #f5f5f5;
 }
+.data-info{
+	margin-top: 125px;
+}
+#data .container-fluid .data-info i {
+	float: left;
+	font-size: 70px;
+	color: #bababa;
+	padding-right: 70px;
+	padding-left: 30px;
+	margin-right: -70px;
+}
 #data h1{
 	font-family: 'Montserrat';
 	font-size: 36px;
@@ -386,7 +446,6 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0px;
 	color: #202020;
 	text-transform: uppercase;
-	padding-top: 130px;
 }
 #data p{
 	font-family: 'Montserrat';
@@ -395,12 +454,6 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0.4px;
 	color: #a1a1a1;
 	text-transform: uppercase;
-}
-#data .pe{
-	font-size: 70px;
-	line-height: 70px;
-	color: #bababa;
-	padding-top: 150px;
 }
 /*end data*/
 
@@ -459,21 +512,15 @@ header .carousel-inner .item #icon{
 	padding-top: 125px;
 	padding-bottom: 90px;
 }
-#client #myCarousel .carousel-caption{
-	right: 0%;
-	left: 0%;
-}
-#client .container #row-right{
-	padding-top: 100px;
-}
-#client #myCarousel p{
+#client #carousel-owl-03 p{
 	font-family: 'Raleway';
 	font-size: 18px;
 	line-height: 28.8px;
 	letter-spacing: 0px;
 	color: #c8c8c8;
+	padding-bottom: 30px;
 }
-#client #myCarousel .link{
+#client #carousel-owl-03 .link{
 	font-family: 'Raleway';
 	font-size: 11px;
 	color: #c8c8c8;
@@ -481,23 +528,63 @@ header .carousel-inner .item #icon{
 	letter-spacing: 0.4px;
 	line-height: 13.2px;
 }
-#client #myCarousel h5{
+#client #carousel-owl-03 h5{
 	font-family: 'Montserrat';
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 0.4px;
 	line-height: 16.8px;
 	color: #ffffff;
+	padding-bottom: 5px;
+}
+#client #row-right {
+	padding-top: 90px;
+	padding-bottom: 90px;
 }
 /*end client*/
 
 /*new-update*/
 #new-update{
 	padding-bottom: 110px;
+	padding-top: 110px;
 }
-#new-update .mask-update{
+#new-update .mask-new-update .mask-update{
+	position: relative;
+	background-image: url("../images/img-new-update.jpg");
+}
+#new-update #bot-right .mask-update{
+	background-image: none;
+	background-color: #f5f5f5 !important;
+}
+#new-update .mask-update .pe-7s-right-arrow{
+	font-size: 22px;
+	color: #868686;
+	float: right;
+	padding-left: 10px;
+}#new-update .mask-update .more-update{
+	float: right;
+	margin-top: 20px;
+	padding-right: 15px;
+}
+#new-update .mask-update .more-update a{
+	color: #868686;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: 'Montserrat';
+	line-height: ;
+	letter-spacing: ;
+	text-transform: uppercase;
+}
+#new-update .mask-update {
+	height: 260px;
+}
+#new-update .mask-update .mask{
 	height: 260px;
 	background-color: #f5f5f5;
+}
+#new-update .container .row .mask-new-update{
+	padding-right: 5px;
+	padding-left: 5px;
 }
 #new-update .container .row{
 	padding-bottom: 10px;
@@ -510,7 +597,6 @@ header .carousel-inner .item #icon{
 	color: #333333;
 	text-transform: uppercase;
 	text-align: center;
-	padding-top: 110px;
 	padding-bottom: 60px;
 }
 #new-update .container h6{
@@ -540,10 +626,12 @@ header .carousel-inner .item #icon{
 }
 #new-update .mask-update .extra{
 	height: 240px;
-	width: 92%;
 	background-color: #fff;
 	position: absolute;
-	margin: 10px;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
 }
 #new-update .container .extra p{
 	font-family: 'Montserrat';
@@ -570,6 +658,7 @@ header .carousel-inner .item #icon{
 #new-update .mask-update img{
 	padding-top: 50px;
 }
+
 /*end new-update*/
 
 
@@ -613,6 +702,8 @@ footer #top .p{
 	letter-spacing: 1px;
 	padding: 20px 30px 0px 10px;
 	text-decoration: none;
+	float: right;
+	padding-top: 10px;
 }
 footer #top .p:hover{
 	color: #c88054;
@@ -643,6 +734,14 @@ footer #middle .row .row .row{
 }
 footer #middle{
 	padding-bottom: 95px;
+}
+footer #middle p a{
+	color: #cccccc;
+}
+footer #middle p a:hover {
+	color: #b6683f;
+	transition: all 0.4s ease-in-out;
+	text-decoration: none;
 }
 footer #bottom ul{
 	padding: 50px 0px;
@@ -688,25 +787,60 @@ footer #bottom #right{
 	background-image: linear-gradient(top, #fff, #eee);  
 	padding: 15px;
 }
+img{
+	max-width: 100%;
+}
 @media (min-width: 1740px){
 	#middle-product .container,
 	header nav .container{
 		width: 1740px;
 	}
 }
-@media (max-width: 767px){
-	#img-bottom-product{
-		padding-top: 50px;
+@media (max-width: 991px){
+	#new-update #top-right,
+	#new-update #bottom-right{
+		padding-top: 10px;
+	}
+	#new-update .row .col-xs-12{
+		padding-bottom: 10px;
+	}
+	#new-update .container .row{
+		padding-bottom: 0px;
+	}
+	#theme-features .box,
+	#theme-features #right .bottom .row{
+		display: block;
+	}
+	#theme-features #right .bottom #right-right {
+    	margin-left: 0px; 
+	}
+	#theme-features .box{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#theme-features .box #left{
+		margin-bottom: 10px;
 	}
 }
 @media (min-width: 1170px){
 	#menu-extra .container {
-		padding-top: 65px;
+		margin-top: 65px;
+		height: 70px;
 	}
 }
 @media (max-width: 767px){
+	.sticky-menu{
+		background-color: rgba(0,0,0,0.8);
+		margin-top: 0px;
+		padding-bottom: 10px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: 9999;
+	}
 	header .navbar{
-		background-color: rgba(0,255,0,0.7);
+		background-color: rgba(0,0,0,0.8);
 		padding-bottom: 15px;
 	}
 	header .navbar ul li{
@@ -728,9 +862,6 @@ footer #bottom #right{
 	#say-hello h1{
 		font-size: 36px;
 	}
-	#Carousel .item #icon {
-		padding-top: 180px;
-	}
 	#Carousel .item p{
 		font-size: 11px;
 	}
@@ -740,5 +871,8 @@ footer #bottom #right{
 	footer #bottom ul,
 	footer #bottom #right{
 		text-align: center;
+	}
+	#img-bottom-product{
+		padding-top: 50px;
 	}
 }
